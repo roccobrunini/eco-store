@@ -54,7 +54,6 @@ nav button :hover {
 }
 .main-section .presentation-article {
   width: 100%;
-  min-width: 200px;
   margin: 0 0 52px 0;
   padding: 0 7px;
 }
@@ -159,8 +158,124 @@ nav button :hover {
   color: white;
 }
 
-footer {
-  background-color: #fa9500;
+.info-section {
   width: 100%;
   height: auto;
+}
+.info-section .about-us,
+.info-section .gallery,
+.info-section .location {
+  width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+}
+.info-section .info-section__title {
+  display: inline-block;
+  width: 100%;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 2.9rem;
+  margin-bottom: 40px;
+}
+.info-section .info-section__title_about-us {
+  margin-bottom: 80px;
+}
+
+.environment {
+  width: 50%;
+  margin: 0 auto 48px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.environment .environment-section__logo {
+  margin-bottom: 20px;
+}
+.environment .environment-section__logo_earth {
+  width: 74px;
+  height: 74px;
+}
+.environment .environment-section__logo_light {
+  width: 91px;
+  height: 91px;
+}
+.environment .environment-section__text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: rgb(232, 100, 36);
+  text-align: center;
+}
+
+.gallery .gallery__img-container {
+  width: 100%;
+  height: 1020px;
+  padding-right: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.gallery .gallery__img-container .gallery__img {
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+}
+
+.location .location__map-container {
+  margin-bottom: 32px;
+  width: 100%;
+  height: 480px;
+}
+.location .location__map-container .location__map {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+.location .location__build {
+  width: 70%;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.6rem;
+  color: rgb(232, 100, 36);
+  margin-bottom: 20px;
+}
+.location .location__adress {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color: rgb(232, 100, 36);
+}
+
+.footer {
+  background-color: #fa9500;
+  width: 100%;
+  min-width: 280px;
+  height: auto;
+  padding: 20px 20px;
+}
+.footer .footer__title {
+  font-size: 2.1rem;
+  font-weight: 500;
+  line-height: 2.7rem;
+  color: white;
+  margin-bottom: 20px;
+}
+.footer .footer__list {
+  list-style: none;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+}
+.footer .footer__list .footer__list-element {
+  margin-bottom: 12px;
+}
+.footer .footer__icons-container {
+  width: 210px;
+  height: auto;
+  margin-top: 28px;
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=main.css.map */
