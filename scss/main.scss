@@ -58,17 +58,20 @@ nav{
     width: 100%;
     min-width: 280px;
     height: auto;
-    padding: 0 20px;
+    padding: 0px 20px;
 
-    article{
-        width: 336px;
-        margin: 0 auto;
+    .presentation-article{
+        width: 100%;
+        min-width: 200px;
+        margin: 0 0 52px 0;
+        padding: 0 7px;
     }
 }
 
 
 
 .image-section{
+    width: 100%;
     height: 362px;
     margin-bottom: 16px;
     img{
@@ -79,9 +82,9 @@ nav{
 }
 
 .impact-section{
+    width: 100%;
     display: grid;
-    flex-wrap: wrap;
-
+    
     .impact-section__title{
         margin-bottom: 16px;
         font-size: 2.8rem;
@@ -111,9 +114,68 @@ nav{
         font-weight: 700;
         line-height: 1.7rem;
         }
-
-    margin-bottom: 50px;
 }
+
+.product-section{
+    width: 100%;
+    height: auto;
+   
+    .healtcare{
+        width: 100%;
+        height: auto;
+        margin-bottom: 52px;
+
+        .healtcare__title{
+            font-size: 2.2rem;
+            font-weight: 500;
+            line-height: 2.7rem;
+            margin-bottom: 24px;
+        }
+
+        .healtcare__slider-articles{
+            display: flex;
+            overflow: scroll;
+            overscroll-behavior-x: contain;
+            scroll-snap-type: x mandatory;
+    
+            
+                .healtcare-article{
+                min-width: 178px;
+                min-height: 275px;
+                padding: 32px 24px;
+                background-color: $secundary-color;
+                box-shadow: 0px 0.54px 5.49px 0px rgba(0, 0, 0, 0.1);   
+                margin: 0 32px 20px 0px;
+    
+                .healtcare-article__img{
+                    width: 100%;
+                    height: 164px;
+                    border-radius: 4px;
+                    margin-bottom: 8px;
+                }   
+        
+                .healtcare-article__title{
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    line-height: 1.8rem;
+                    
+                }
+        
+                .healtcare-article__text{
+                    width: 90%;
+                    font-size: 0.8rem;
+                    font-weight: 400;
+                    line-height: 1.1rem;
+                }
+            }
+        }
+
+    }
+}
+
+
+ 
+
 
 footer{
     $background: #fa9500;
