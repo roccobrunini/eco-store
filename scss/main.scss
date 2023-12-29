@@ -119,62 +119,68 @@ nav{
 .product-section{
     width: 100%;
     height: auto;
-   
-    .healtcare{
+
+    .product-section__div{
         width: 100%;
         height: auto;
         margin-bottom: 52px;
 
-        .healtcare__title{
+        .product-section__title{
             font-size: 2.2rem;
             font-weight: 500;
             line-height: 2.7rem;
             margin-bottom: 24px;
-        }
-
-        .healtcare__slider-articles{
-            display: flex;
-            overflow: scroll;
-            overscroll-behavior-x: contain;
-            scroll-snap-type: x mandatory;
-    
-            
-                .healtcare-article{
-                min-width: 178px;
-                min-height: 275px;
-                padding: 32px 24px;
-                background-color: $secundary-color;
-                box-shadow: 0px 0.54px 5.49px 0px rgba(0, 0, 0, 0.1);   
-                margin: 0 32px 20px 0px;
-    
-                .healtcare-article__img{
-                    width: 100%;
-                    height: 164px;
-                    border-radius: 4px;
-                    margin-bottom: 8px;
-                }   
-        
-                .healtcare-article__title{
-                    font-size: 1.4rem;
-                    font-weight: 600;
-                    line-height: 1.8rem;
-                    
-                }
-        
-                .healtcare-article__text{
-                    width: 90%;
-                    font-size: 0.8rem;
-                    font-weight: 400;
-                    line-height: 1.1rem;
-                }
-            }
-        }
-
+        }    
     }
 }
 
+.slider-articles{
+        display: flex;
+        overflow: scroll;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+        }
 
- 
+.product-article{
+    min-width: 178px;
+    min-height: 275px;
+    padding: 32px 24px;
+    box-shadow: 0px 0.54px 5.49px 0px rgba(0, 0, 0, 0.1);   
+    margin: 0 32px 20px 0px;
+
+    .product-article__img{
+        width: 100%;
+        height: 164px;
+        border-radius: 4px;
+        margin-bottom: 8px;
+    }   
+
+    .product-article__title{
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.8rem;
+        
+    }
+
+    .product-article__text{
+        width: 90%;
+        font-size: 0.8rem;
+        font-weight: 400;
+        line-height: 1.1rem;
+    }
+}
+
+.product-article_healtcare{
+    background-color: $secundary-color;
+}
+
+.product-article_furniture{
+    background-color: $tertiary-color;
+    color: white;
+}
+
+
+
 
 
 footer{
