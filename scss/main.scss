@@ -27,6 +27,8 @@ body{
 nav{ 
     width: 100%;
     min-width: 280px;
+    max-width: 1300px;
+    margin: 0 auto;
     height: auto;
     display: flex;
     padding: 20px;
@@ -57,7 +59,9 @@ nav{
 .main-section{ 
     width: 100%;
     min-width: 280px;
+    max-width: 1300px;
     height: auto;
+    margin: 0 auto;
     padding: 0px 20px;
 
     .presentation-article{
@@ -134,11 +138,11 @@ nav{
 }
 
 .slider-articles{
-        display: flex;
-        overflow: scroll;
-        overscroll-behavior-x: contain;
-        scroll-snap-type: x mandatory;
-        }
+    display: flex;
+    overflow: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;      
+}
 
 .product-article{
     min-width: 178px;
@@ -298,28 +302,35 @@ nav{
     height: auto;
     padding: 20px 20px;
 
-    .footer__title{
-        font-size: 2.1rem;
-        font-weight: 500;
-        line-height: 2.7rem;
-        color: white;
-        margin-bottom: 20px;
-    }
+    .footer__info-container{
+        max-width: 1300px;
+        margin: 0 auto;
 
-    .footer__list{
-        list-style: none;
-        color: white;
-        font-size: 1.4rem;
-        font-weight: 400;
-        line-height: 1.8rem; 
-
-        .footer__list-element{
-            margin-bottom: 12px;
+        .footer__title{
+            font-size: 2.1rem;
+            font-weight: 500;
+            line-height: 2.7rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+    
+        .footer__list{
+            list-style: none;
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 1.8rem; 
+    
+            .footer__list-element{
+                margin-bottom: 12px;
+            }
         }
     }
 
     .footer__icons-container{
+        margin: 0 auto;
         width: 210px;
+        max-width: 1300px;
         height: auto;
         margin-top: 28px;
         display: flex;
