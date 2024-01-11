@@ -147,6 +147,7 @@ nav{
 }
 
 .slider-articles{
+    height: auto;
     display: flex;
     overflow: scroll;
     overscroll-behavior-x: contain;
@@ -168,7 +169,7 @@ nav{
 
     .product-article__img{
         width: 100%;
-        height: 80%;
+        height: 78%;
         border-radius: 4px;
         margin-bottom: 8px;
     }   
@@ -291,6 +292,11 @@ nav{
 
 
         .location__map{
+            display: block;
+            background-image: url("../assets/img/map.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
             width: 100%;
             height: 100%;
             border-radius: 4px;
@@ -324,7 +330,7 @@ nav{
     height: auto;
     padding: 20px 20px;
 
-    .footer__info-container{
+    .footer__info-section{
         max-width: 1300px;
         margin: 0 auto;
 
@@ -349,14 +355,20 @@ nav{
         }
     }
 
-    .footer__icons-container{
+    .footer__icons-section{
+        width: 100%;
         margin: 0 auto;
-        width: 210px;
         max-width: 1300px;
         height: auto;
         margin-top: 28px;
         display: flex;
-        justify-content: space-between;
+        
+        .footer__icons-container{
+            width: 210px;
+            display: flex;
+            justify-content: space-between;
+        }
+
     }
 }
 
@@ -424,7 +436,18 @@ nav{
 
     }
 
+    .product-article{
+        min-width: 200px;
+    }
  
+    .footer{
+
+        .footer__icons-section{
+
+            justify-content: center;
+        }
+
+    }
 
 }
 @media screen and (min-width: 746px) {
@@ -444,7 +467,13 @@ nav{
 
     }
 
+}
+
+@media screen and (min-width: 912px) {
+    
     .slider-articles{
+        max-width: 1024px;
+        margin: 0 auto;
         justify-content: space-between;
         flex-wrap: wrap;
         overflow: hidden;
