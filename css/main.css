@@ -378,4 +378,8 @@ nav button :hover {
     flex-wrap: wrap;
     overflow: hidden;
   }
+  .environment {
+    width: auto;
+    max-width: none;
+  }
 }/*# sourceMappingURL=main.css.map */
