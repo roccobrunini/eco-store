@@ -83,7 +83,7 @@ nav{
 
     .presentation-article{
         width: 100%;
-        @include flexConfing(column,normal,center );
+        @include flexConfing(column, null, center );
         margin: 0 0 52px 0;
         padding: 0 7px;
     }
@@ -106,7 +106,7 @@ nav{
 
 .impact-section{
     width: 100%;
-    @include minMax(null, 400px); /* only max-width */
+    max-width: 400px;
     display: grid;
     
     .impact-section__title{
@@ -123,6 +123,7 @@ nav{
         width: 150px;
         height: 42px;
         @include flexConfing(row, center, center);
+        justify-self: center;
         background: rgba(250, 149, 0, 1);
         border: none;
         border-radius: 20px;
@@ -224,7 +225,7 @@ nav{
 
 
 .environment{
-    @include minMax(null ,250px); /* only max-width */
+    max-width: 250px;
     @include flexConfing(row, center, center);
     flex-wrap: wrap;
 
@@ -302,14 +303,14 @@ nav{
 
 .footer{
     width: 100%;
-    @include minMax(280px); /* only min-width*/
+    min-width: 280px;
     height: auto;
     padding: 20px 20px;
     $background: #fa9500;
     background-color: $background;
 
     .footer__info-section{
-        @include minMax(null, 1300px); /* only max-width */
+        max-width: 1300px;
         margin: 0 auto;
 
         .footer__title{
@@ -332,7 +333,7 @@ nav{
     .footer__icons-section{
         width: 100%;
         height: auto;
-        @include minMax(null, 1300px); /* only max-width */
+        max-width: 1300px;
         @include flexConfing(row, normal, normal);
         margin-top: 28px;
         margin: 0 auto;
@@ -434,7 +435,7 @@ nav{
 @media screen and (min-width: 912px) {
     
     .slider-articles{
-        @include minMax(null, 1024px); /* only max-width */
+        max-width: 1024px;
         margin: 0 auto;
         justify-content: space-between;
         flex-wrap: wrap;

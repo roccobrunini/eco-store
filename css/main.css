@@ -62,7 +62,6 @@ nav button :hover {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: normal;
   align-items: center;
   margin: 0 0 52px 0;
   padding: 0 7px;
@@ -85,7 +84,6 @@ nav button :hover {
 .impact-section {
   width: 100%;
   max-width: 400px;
-  /* only max-width */
   display: grid;
 }
 .impact-section .impact-section__title {
@@ -107,6 +105,7 @@ nav button :hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  justify-self: center;
   background: rgb(250, 149, 0);
   border: none;
   border-radius: 20px;
@@ -216,7 +215,6 @@ nav button :hover {
 
 .environment {
   max-width: 250px;
-  /* only max-width */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -291,14 +289,12 @@ nav button :hover {
 .footer {
   width: 100%;
   min-width: 280px;
-  /* only min-width*/
   height: auto;
   padding: 20px 20px;
   background-color: #fa9500;
 }
 .footer .footer__info-section {
   max-width: 1300px;
-  /* only max-width */
   margin: 0 auto;
 }
 .footer .footer__info-section .footer__title {
@@ -322,7 +318,6 @@ nav button :hover {
   width: 100%;
   height: auto;
   max-width: 1300px;
-  /* only max-width */
   display: flex;
   flex-direction: row;
   justify-content: normal;
@@ -397,7 +392,6 @@ nav button :hover {
 @media screen and (min-width: 912px) {
   .slider-articles {
     max-width: 1024px;
-    /* only max-width */
     margin: 0 auto;
     justify-content: space-between;
     flex-wrap: wrap;
