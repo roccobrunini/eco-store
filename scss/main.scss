@@ -1,4 +1,5 @@
 
+
 $primary-color:#FFEFE7;
 $secundary-color:#FFDAC6;
 $tertiary-color:#BABD8D;
@@ -48,7 +49,7 @@ nav{
     height: auto;
     margin: 0 auto;
     padding: 20px 20px 30px 20px;
-    @include flexConfing(row,space-between ,center );
+    @include flexConfig(row,space-between ,center );
 
     p{
         display: inline-block;
@@ -65,7 +66,7 @@ nav{
     button{
         width: 32px;
         height: 32px;
-        @include flexConfing(row,center ,center );
+        @include flexConfig(row,center ,center );
         background-color: $primary-color;
         border: none;
         :hover{
@@ -83,7 +84,7 @@ nav{
 
     .presentation-article{
         width: 100%;
-        @include flexConfing(column, null, center );
+        @include flexConfig(column, null, center );
         margin: 0 0 52px 0;
         padding: 0 7px;
     }
@@ -122,7 +123,7 @@ nav{
     .impact-section__button{
         width: 150px;
         height: 42px;
-        @include flexConfing(row, center, center);
+        @include flexConfig(row, center, center);
         justify-self: center;
         background: rgba(250, 149, 0, 1);
         border: none;
@@ -150,7 +151,7 @@ nav{
 
 .slider-articles{
     height: auto;
-    @include flexConfing(row, normal, normal);
+    @include flexConfig(row, normal, normal);
     overflow: scroll;
     overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;
@@ -218,7 +219,7 @@ nav{
 }
 
 .about-us__container{
-    @include flexConfing(row, space-around, center);
+    @include flexConfig(row, space-around, center);
     flex-wrap: wrap;
     gap: 35px;
 }
@@ -226,7 +227,7 @@ nav{
 
 .environment{
     max-width: 250px;
-    @include flexConfing(row, center, center);
+    @include flexConfig(row, center, center);
     flex-wrap: wrap;
 
     .environment-section__logo_earth{
@@ -252,7 +253,7 @@ nav{
 
     .gallery__img-container{
         width: 100%;
-        @include flexConfing(row, center, center);
+        @include flexConfig(row, center, center);
         flex-wrap: wrap;
         gap: 50px;
         padding-right: 8px;
@@ -334,116 +335,18 @@ nav{
         width: 100%;
         height: auto;
         max-width: 1300px;
-        @include flexConfing(row, normal, normal);
+        @include flexConfig(row, normal, normal);
         margin-top: 28px;
         margin: 0 auto;
         
         .footer__icons-container{
             width: 210px;
-            @include flexConfing(row, space-between, center);
+            @include flexConfig(row, space-between, center);
             margin-top: 12px;
         }
 
     }
 }
 
-
-
-@media screen and (min-width: 640px) {
-   
-    html{
-        font-size: 70%;
-    }
-
-    nav{
-        padding-bottom: 50px;
-        
-        .phone-display-icon{
-            display: none;
-        }
-    
-        .desktop-display-icons{
-            @include flexConfing(row, space-around, center);
-            width: 200px;
-        }
-    }
-
-    .main-section{
-         .presentation-article{
-            @include flexConfing(row-reverse, space-between, normal);
-            gap: 50px;
-        }
-    }
-
-
-    .impact-section{
-        text-align: justify;
-
-        .impact-section__title{
-            align-self: flex-end;
-        }
-
-        .impact-section__text{
-            align-self: center;
-        }
-
-        .impact-section__button{
-            justify-self: normal;
-        }
-
-    }
-
-    .product-section{
-        .product-section__div{
-            .product-section__title{
-                margin-bottom: 36px;
-            }
-        }
-    }
-
-    .product-article{
-        @include minMax(200px); /* only min-width */
-    }
- 
-    .footer{
-        .footer__icons-section{
-            justify-content: center;
-        }
-    }
-
-}
-
-@media screen and (min-width: 746px) {
-    
-    html{
-        font-size: 75%;
-    }
-    
-    .product-section{
-
-        .product-section__div{
-
-            .product-section__title{
-                margin-bottom: 48px;
-            }
-        }
-
-    }
-
-}
-
-@media screen and (min-width: 912px) {
-    
-    .slider-articles{
-        max-width: 1024px;
-        margin: 0 auto;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        overflow: hidden;
-    }
-
-    .environment{
-        width: auto;
-        max-width: none;
-    }
-}
+@import 'tablet';
+@import 'laptop';
