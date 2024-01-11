@@ -1,8 +1,29 @@
+
 $primary-color:#FFEFE7;
 $secundary-color:#FFDAC6;
 $tertiary-color:#BABD8D;
 $primary-text-color:#7C6A0A;
 $font-stackl: 'IBM Plex Sans' , sans-serif; 
+
+@mixin flexConfing($direction:null, $content:null, $aling:null){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $aling;
+}
+
+@mixin fontConfing($size, $weight, $lineh){
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lineh;
+}
+
+@mixin minMax($minw:null, $maxw:null, $minh:null, $maxh:null){
+    min-width: $minw;
+    max-width: $maxw;
+    min-height: $minh;
+    max-height: $maxh;
+}
 
 *{
     margin: 0;
@@ -23,13 +44,11 @@ body{
 
 nav{ 
     width: 100%;
-    min-width: 280px;
-    max-width: 1300px;
-    margin: 0 auto;
+    @include minMax(280px, 1300px);
     height: auto;
-    display: flex;
+    margin: 0 auto;
     padding: 20px 20px 30px 20px;
-    justify-content: space-between;
+    @include flexConfing(row,space-between ,center );
 
     p{
         display: inline-block;
@@ -46,9 +65,7 @@ nav{
     button{
         width: 32px;
         height: 32px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexConfing(row,center ,center );
         background-color: $primary-color;
         border: none;
         :hover{
@@ -59,17 +76,14 @@ nav{
 
 .main-section{ 
     width: 100%;
-    min-width: 280px;
-    max-width: 1300px;
+    @include minMax(280px, 1300px);
     height: auto;
     margin: 0 auto;
     padding: 0px 20px;
 
     .presentation-article{
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flexConfing(column,normal,center );
         margin: 0 0 52px 0;
         padding: 0 7px;
     }
@@ -80,9 +94,7 @@ nav{
 .image-section{
     width: 100%;
     height: 50vw;
-    min-height: 336px;
-    max-height: 500px;
-    max-width: 400px;
+    @include minMax(null, 400px, 336px, 500px);
     margin-bottom: 16px;
     
     img{
@@ -94,37 +106,28 @@ nav{
 
 .impact-section{
     width: 100%;
-    max-width: 400px;
+    @include minMax(null, 400px); /* only max-width */
     display: grid;
     
     .impact-section__title{
         margin-bottom: 16px;
-        font-size: 2.8rem;
-        font-weight: 600;
-        line-height: 3.6rem;
+        @include fontConfing(2.8rem, 600, 3.6rem);
     }
 
     .impact-section__text{
-        font-size: 1.2rem;
-        font-weight: 400;
-        line-height: 1.6rem;
+        @include fontConfing(1.2rem, 400, 1.6rem);
         margin-bottom: 16px;
     }
 
     .impact-section__button{
-        justify-self: center;
         width: 150px;
         height: 42px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexConfing(row, center, center);
         background: rgba(250, 149, 0, 1);
         border: none;
         border-radius: 20px;
         color: white;
-        font-size: 13px;
-        font-weight: 700;
-        line-height: 17px;
+        @include fontConfing(13px, 700, 17px);
         }
 }
 
@@ -138,9 +141,7 @@ nav{
         margin-bottom: 52px;
 
         .product-section__title{
-            font-size: 2.2rem;
-            font-weight: 500;
-            line-height: 2.7rem;
+            @include fontConfing(2.2rem, 500, 2.7rem);
             margin-bottom: 24px;
         }    
     }
@@ -148,7 +149,7 @@ nav{
 
 .slider-articles{
     height: auto;
-    display: flex;
+    @include flexConfing(row, normal, normal);
     overflow: scroll;
     overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;
@@ -158,14 +159,12 @@ nav{
 }
 
 .product-article{
-    min-width: 178px;
-    max-width: 240px;
+    @include minMax(178px, 240px, 250px, 372px);
     height: auto;
-    min-height: 250px;
-    max-height: 372px;
     padding: 32px 24px;
-    box-shadow: 0px 0.54px 5.49px 0px rgba(0, 0, 0, 0.1);   
     margin-bottom: 20px;
+    box-shadow: 0px 0.54px 5.49px 0px rgba(0, 0, 0, 0.1);   
+
 
     .product-article__img{
         width: 100%;
@@ -175,17 +174,12 @@ nav{
     }   
 
     .product-article__title{
-        font-size: 1.4rem;
-        font-weight: 600;
-        line-height: 1.8rem;
-        
+        @include fontConfing(1.4rem, 600, 1.8rem);   
     }
 
     .product-article__text{
         width: 90%;
-        font-size: 0.8rem;
-        font-weight: 400;
-        line-height: 1.1rem;
+        @include fontConfing(0.8rem, 400, 1.1rem);
     }
 }
 
@@ -213,9 +207,7 @@ nav{
     .info-section__title{
         display: inline-block;
         width: 100%;
-        font-size: 2.2rem;
-        font-weight: 500;
-        line-height: 2.9rem;
+        @include fontConfing(2.2rem, 500, 2.9rem);
         margin-bottom: 40px;
     }
 
@@ -225,21 +217,16 @@ nav{
 }
 
 .about-us__container{
-    display: flex;
+    @include flexConfing(row, space-around, center);
     flex-wrap: wrap;
     gap: 35px;
-    justify-content: space-around;
-    align-items: center;
 }
 
 
 .environment{
-    max-width: 250px;
-    display: flex;
+    @include minMax(null ,250px); /* only max-width */
+    @include flexConfing(row, center, center);
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-
 
     .environment-section__logo_earth{
         width: 7.4rem;
@@ -254,9 +241,7 @@ nav{
     
     .environment-section__text{
         width: 250px;
-        font-size: 1.4rem;
-        font-weight: 500;
-        line-height: 1.8rem;
+        @include fontConfing(1.4rem, 500, 1.8rem);
         color: rgba(232, 100, 36, 1);
         text-align: center;
     }
@@ -266,17 +251,14 @@ nav{
 
     .gallery__img-container{
         width: 100%;
-        padding-right: 8px;
-        display: flex;
+        @include flexConfing(row, center, center);
         flex-wrap: wrap;
-        justify-content: center;
         gap: 50px;
-        align-items: center;
+        padding-right: 8px;
 
         .gallery__img{
             width: 100%;
-            max-width: 296px;
-            max-height: 298px;
+            @include minMax(null, 296px, null, 298px); 
             height: 300px;
             border-radius: 12px;
         }
@@ -306,38 +288,32 @@ nav{
 
     .location__build{
         width: 70%;
-        font-size: 2rem;
-        font-weight: 400;
-        line-height: 2.6rem;
+        @include fontConfing(2rem, 400, 2.6rem);
         color: rgba(232, 100, 36, 1);
         margin-bottom: 20px;
     }
 
     .location__adress{
-        font-size: 1.5rem;
-        font-weight: 400;
-        line-height: 2rem; 
+        @include fontConfing(1.5rem, 400, 2rem); 
         color: rgba(232, 100, 36, 1);
     }
     
 }
 
 .footer{
-    $background: #fa9500;
-    background-color: $background;
     width: 100%;
-    min-width: 280px;
+    @include minMax(280px); /* only min-width*/
     height: auto;
     padding: 20px 20px;
+    $background: #fa9500;
+    background-color: $background;
 
     .footer__info-section{
-        max-width: 1300px;
+        @include minMax(null, 1300px); /* only max-width */
         margin: 0 auto;
 
         .footer__title{
-            font-size: 2.1rem;
-            font-weight: 500;
-            line-height: 2.7rem;
+            @include fontConfing(2.1rem, 500, 2.7rem);
             color: white;
             margin-bottom: 20px;
         }
@@ -345,9 +321,7 @@ nav{
         .footer__list{
             list-style: none;
             color: white;
-            font-size: 1.4rem;
-            font-weight: 400;
-            line-height: 1.8rem; 
+            @include fontConfing(1.4rem, 400, 1.8rem);
     
             .footer__list-element{
                 margin-bottom: 12px;
@@ -357,21 +331,20 @@ nav{
 
     .footer__icons-section{
         width: 100%;
-        margin: 0 auto;
-        max-width: 1300px;
         height: auto;
+        @include minMax(null, 1300px); /* only max-width */
+        @include flexConfing(row, normal, normal);
         margin-top: 28px;
-        display: flex;
+        margin: 0 auto;
         
         .footer__icons-container{
             width: 210px;
-            display: flex;
-            justify-content: space-between;
+            @include flexConfing(row, space-between, center);
+            margin-top: 12px;
         }
 
     }
 }
-
 
 
 
@@ -389,20 +362,14 @@ nav{
         }
     
         .desktop-display-icons{
-            display: flex;
-            justify-content: space-around;
+            @include flexConfing(row, space-around, center);
             width: 200px;
         }
-
     }
 
     .main-section{
-
-    .presentation-article{
-            display: flex;
-            justify-content: space-between;
-            align-items: normal;
-            flex-direction: row-reverse;
+         .presentation-article{
+            @include flexConfing(row-reverse, space-between, normal);
             gap: 50px;
         }
     }
@@ -426,30 +393,25 @@ nav{
     }
 
     .product-section{
-
         .product-section__div{
-
             .product-section__title{
                 margin-bottom: 36px;
             }
         }
-
     }
 
     .product-article{
-        min-width: 200px;
+        @include minMax(200px); /* only min-width */
     }
  
     .footer{
-
         .footer__icons-section{
-
             justify-content: center;
         }
-
     }
 
 }
+
 @media screen and (min-width: 746px) {
     
     html{
@@ -472,7 +434,7 @@ nav{
 @media screen and (min-width: 912px) {
     
     .slider-articles{
-        max-width: 1024px;
+        @include minMax(null, 1024px); /* only max-width */
         margin: 0 auto;
         justify-content: space-between;
         flex-wrap: wrap;
