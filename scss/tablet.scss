@@ -12,14 +12,14 @@
         }
     
         .desktop-display-icons{
-            @include flexConfing(row, space-around, center);
+            @include flexConfig(row, space-around, center);
             width: 200px;
         }
     }
 
     .main-section{
          .presentation-article{
-            @include flexConfing(row-reverse, space-between, normal);
+            @include flexConfig(row-reverse, space-between, normal);
             gap: 50px;
         }
     }
@@ -51,7 +51,7 @@
     }
 
     .product-article{
-        @include minMax(200px); /* only min-width */
+        min-width: 200px;
     }
  
     .footer{

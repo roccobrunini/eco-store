@@ -36,18 +36,24 @@ nav p {
 nav .desktop-display-icons {
   display: none;
 }
-nav button {
-  width: 32px;
-  height: 32px;
+
+.button-icon {
+  width: auto;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #FFEFE7;
   border: none;
 }
-nav button :hover {
+.button-icon :hover {
   background-color: rgb(226, 218, 218);
+}
+
+.profile,
+.wishlist,
+.shopping-cart {
+  background-color: #FFEFE7;
 }
 
 .main-section {
@@ -145,14 +151,23 @@ nav button :hover {
 }
 
 .product-article {
+  position: relative;
   min-width: 178px;
   max-width: 240px;
   min-height: 250px;
   max-height: 372px;
   height: auto;
-  padding: 32px 24px;
+  padding: 40px 24px 32px 24px;
   margin-bottom: 20px;
   box-shadow: 0px 0.54px 5.49px 0px rgba(0, 0, 0, 0.1);
+}
+.product-article .article-icon {
+  position: absolute;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  top: 10px;
+  right: 6px;
 }
 .product-article .product-article__img {
   width: 100%;
@@ -172,11 +187,11 @@ nav button :hover {
   line-height: 1.1rem;
 }
 
-.product-article_healtcare {
+.healtcare-color {
   background-color: #FFDAC6;
 }
 
-.product-article_furniture {
+.furniture-color {
   background-color: #BABD8D;
   color: white;
 }
@@ -375,7 +390,6 @@ nav button :hover {
   }
   .product-article {
     min-width: 200px;
-    /* only min-width */
   }
   .footer .footer__icons-section {
     justify-content: center;

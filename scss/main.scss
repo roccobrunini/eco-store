@@ -6,14 +6,14 @@ $tertiary-color:#BABD8D;
 $primary-text-color:#7C6A0A;
 $font-stackl: 'IBM Plex Sans' , sans-serif; 
 
-@mixin flexConfing($direction:null, $content:null, $aling:null){
+@mixin flexConfig($direction:null, $content:null, $aling:null){
     display: flex;
     flex-direction: $direction;
     justify-content: $content;
     align-items: $aling;
 }
 
-@mixin fontConfing($size, $weight, $lineh){
+@mixin fontConfig($size, $weight, $lineh){
     font-size: $size;
     font-weight: $weight;
     line-height: $lineh;
@@ -63,17 +63,24 @@ nav{
         display: none;
     }
 
-    button{
-        width: 32px;
-        height: 32px;
-        @include flexConfig(row,center ,center );
-        background-color: $primary-color;
-        border: none;
-        :hover{
-            background-color: rgb(226, 218, 218);
-        }
+}
+
+.button-icon{
+    width: auto;
+    height: auto;
+    @include flexConfig(row,center ,center );
+    border: none;
+    :hover{
+        background-color: rgb(226, 218, 218);
     }
 }
+
+.profile,
+.wishlist,
+.shopping-cart{
+        background-color: $primary-color;
+}
+
 
 .main-section{ 
     width: 100%;
@@ -112,11 +119,11 @@ nav{
     
     .impact-section__title{
         margin-bottom: 16px;
-        @include fontConfing(2.8rem, 600, 3.6rem);
+        @include fontConfig(2.8rem, 600, 3.6rem);
     }
 
     .impact-section__text{
-        @include fontConfing(1.2rem, 400, 1.6rem);
+        @include fontConfig(1.2rem, 400, 1.6rem);
         margin-bottom: 16px;
     }
 
@@ -129,7 +136,7 @@ nav{
         border: none;
         border-radius: 20px;
         color: white;
-        @include fontConfing(13px, 700, 17px);
+        @include fontConfig(13px, 700, 17px);
         }
 }
 
@@ -143,7 +150,7 @@ nav{
         margin-bottom: 52px;
 
         .product-section__title{
-            @include fontConfing(2.2rem, 500, 2.7rem);
+            @include fontConfig(2.2rem, 500, 2.7rem);
             margin-bottom: 24px;
         }    
     }
@@ -161,12 +168,21 @@ nav{
 }
 
 .product-article{
+    position: relative;
     @include minMax(178px, 240px, 250px, 372px);
     height: auto;
-    padding: 32px 24px;
+    padding: 40px 24px 32px 24px;
     margin-bottom: 20px;
     box-shadow: 0px 0.54px 5.49px 0px rgba(0, 0, 0, 0.1);   
 
+    .article-icon{
+        position: absolute;
+        display: inline-block;
+        width: auto;
+        height: auto;
+        top: 10px;
+        right: 6px;
+    }
 
     .product-article__img{
         width: 100%;
@@ -176,20 +192,20 @@ nav{
     }   
 
     .product-article__title{
-        @include fontConfing(1.4rem, 600, 1.8rem);   
+        @include fontConfig(1.4rem, 600, 1.8rem);   
     }
 
     .product-article__text{
         width: 90%;
-        @include fontConfing(0.8rem, 400, 1.1rem);
+        @include fontConfig(0.8rem, 400, 1.1rem);
     }
 }
 
-.product-article_healtcare{
+.healtcare-color{
     background-color: $secundary-color;
 }
 
-.product-article_furniture{
+.furniture-color{
     background-color: $tertiary-color;
     color: white;
 }
@@ -209,7 +225,7 @@ nav{
     .info-section__title{
         display: inline-block;
         width: 100%;
-        @include fontConfing(2.2rem, 500, 2.9rem);
+        @include fontConfig(2.2rem, 500, 2.9rem);
         margin-bottom: 40px;
     }
 
@@ -243,7 +259,7 @@ nav{
     
     .environment-section__text{
         width: 250px;
-        @include fontConfing(1.4rem, 500, 1.8rem);
+        @include fontConfig(1.4rem, 500, 1.8rem);
         color: rgba(232, 100, 36, 1);
         text-align: center;
     }
@@ -290,13 +306,13 @@ nav{
 
     .location__build{
         width: 70%;
-        @include fontConfing(2rem, 400, 2.6rem);
+        @include fontConfig(2rem, 400, 2.6rem);
         color: rgba(232, 100, 36, 1);
         margin-bottom: 20px;
     }
 
     .location__adress{
-        @include fontConfing(1.5rem, 400, 2rem); 
+        @include fontConfig(1.5rem, 400, 2rem); 
         color: rgba(232, 100, 36, 1);
     }
     
@@ -315,7 +331,7 @@ nav{
         margin: 0 auto;
 
         .footer__title{
-            @include fontConfing(2.1rem, 500, 2.7rem);
+            @include fontConfig(2.1rem, 500, 2.7rem);
             color: white;
             margin-bottom: 20px;
         }
@@ -323,7 +339,7 @@ nav{
         .footer__list{
             list-style: none;
             color: white;
-            @include fontConfing(1.4rem, 400, 1.8rem);
+            @include fontConfig(1.4rem, 400, 1.8rem);
     
             .footer__list-element{
                 margin-bottom: 12px;
